@@ -8,6 +8,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
+            <header th:replace="layout/plantilla :: header"/>
 
             <h2>Listado de clientes</h2>
             <hr>
@@ -35,22 +36,14 @@
                         </tr>
                     </tbody>
 
-
-
-
-
                 </table>
 
             </div>
-
-
-
-
-
+            
             <div th:if="${clientes == null or clientes.empty}">
                 <h2>No tenemos clientes que mostrar</h2>
 
             </div>
-
+            <footer th:replace="layout/plantilla :: footer"/>
         </body>
     </html>
