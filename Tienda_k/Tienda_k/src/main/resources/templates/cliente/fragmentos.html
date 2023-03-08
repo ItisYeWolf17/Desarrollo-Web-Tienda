@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <html>
+        <head th:replace = "~{layout/plantilla :: head}">
+
+        </head>
+        <body>
+
+            <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button type="button" 
+                                    class="btn btn-primary btn-block" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#agregarCliente">
+                                <a  class="btn btn-primary" th:href="@{/cliente/nuevo}" >
+                                    <i class="fas fa-user-plus">    Nuevo Cliente</i>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section th:fragment="agregarCliente">
+                <div id="agregarCliente" 
+                     class="modal fade" 
+                     tabindex="-1" 
+                     aria-labelledby="exampleModalLabel" 
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info text-white">
+                                <h5 class="modal-title">Agregar Cliente</h5>
+                                <button type="button" 
+                                        class="btn-close" 
+                                        data-bs-dismiss="modal" 
+                                        arial-label="Close">
+                                </button>
+                            </div>
+                            <form th:action="@{/cliente/guardar}" method="post" th:object="${cliente}">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" name="nombre" required="true"/>
+                                </div>
+
+                                <br>
+                                    <div class="form-group">
+                                        <label>Apellidos</label>
+                                        <input class="form-control" type="text" name="apellidos" required="true"/>
+                                        <br>
+
+                                            <div class="form-group">
+
+                                                <label>Correo</label>
+                                                <input class="form-control" type="email" name="correo" required="true"/>
+                                                <br>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <label>Telefono</label>
+                                                <input class="form-control" type="tel" name="telefono"/>
+                                                <div class="form-group">
+
+                                                    <br>
+                                                        <hr>
+                                                            <div class="form-group">
+                                                                <input class="form-" type="submit" value="Enviar" />
+                                                            </div>
+
+                                                            </form>
+                                                            </div>
+                                                            </div>
+
+                                                            </div>
+                                                            </section>   
+
+                                                            <h2>Listado de clientes</h2>
+                                                            <hr/>
+                                                            <a  class="btn btn-primary" th:href="@{/cliente/nuevo}" >
+                                                                <i class="fas fa-user-plus">    Nuevo Cliente</i>
+                                                            </a>
+                                                            <div th:if=" ${clientes != null and !clientes.empty}">   
+                                                                <table class="table table-stripe">
+                                                                    <thead class="thear-dark">
+                                                                        <tr>
+                                                                            <th>Nombre</th>
+                                                                            <th>Apellidos</th>
+                                                                            <th>Correo</th>
+                                                                            <th>Telefono</th>
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tr th:each="cliente: ${clientes}">
+                                                                        <td>[[${cliente.nombre}]]</td>
+                                                                        <td>[[${cliente.apellidos}]]</td>
+                                                                        <td>[[${cliente.correo}]]</td>
+                                                                        <td>[[${cliente.telefono}]]</td>
+                                                                        <td> 
+                                                                            <a class="btn btn-danger" th:href="@{/cliente/eliminar/} + ${cliente.idCliente}">
+                                                                                <i class="fas fa-trash">    Eliminar</i>
+                                                                            </a> 
+                                                                            <a class="btn btn-success" th:href="@{/cliente/modificar/} + ${cliente.idCliente}">
+                                                                                <i class="fas fa-pencil">  Modificar</i>
+                                                                            </a> 
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </table>
+
+                                                            </div>
+
+                                                            <div th:if="${clientes == null or clientes.empty}">
+                                                                <h2>No tenemos clientes que mostrar</h2>
+
+                                                            </div>
+                                                            <footer th:replace="~{layout/plantilla :: footer}"/>
+                                                            </body>
+                                                            </html>
