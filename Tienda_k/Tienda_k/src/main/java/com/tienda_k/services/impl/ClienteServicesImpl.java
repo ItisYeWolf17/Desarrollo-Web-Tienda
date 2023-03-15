@@ -5,7 +5,9 @@
 package com.tienda_k.services.impl;
 
 import com.tienda_k.dao.ClienteDao;
+import com.tienda_k.dao.CreditoDao;
 import com.tienda_k.domain.Cliente;
+import com.tienda_k.domain.Credito;
 import com.tienda_k.services.ClienteService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +20,21 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 public class ClienteServicesImpl implements ClienteService {
-    
-    @Autowired
 
+    @Autowired
     private ClienteDao clienteDao;
 
+    @Autowired
+    private CreditoDao creditoDao;
+
     @Override
-    @Transactional(readOnly=true)
+    @Transactional(readOnly = true)
     public List<Cliente> getClientes() {
-       return clienteDao.findAll();
+        return clienteDao.findAll();
     }
 
     @Override
-    @Transactional(readOnly=true)
+    @Transactional(readOnly = true)
     public Cliente getCliente(Cliente cliente) {
         return clienteDao.findById(cliente.getIdCliente()).orElse(null);
     }
@@ -38,6 +42,9 @@ public class ClienteServicesImpl implements ClienteService {
     @Override
     @Transactional()
     public void save(Cliente cliente) {
+        Credito credito = cliente.getCredito();
+        credito = creditoDao.save(credito);
+        cliente.setCredito(credito);
         clienteDao.save(cliente);
     }
 
@@ -46,5 +53,5 @@ public class ClienteServicesImpl implements ClienteService {
     public void delete(Cliente cliente) {
         clienteDao.delete(cliente);
     }
-    
+
 }

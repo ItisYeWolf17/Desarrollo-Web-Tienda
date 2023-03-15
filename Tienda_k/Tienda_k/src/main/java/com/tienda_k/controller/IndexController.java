@@ -5,6 +5,7 @@
 package com.tienda_k.controller;
 
 import com.tienda_k.domain.Cliente;
+import com.tienda_k.services.ArticuloService;
 import com.tienda_k.services.ClienteService;
 import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
@@ -19,8 +20,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 public class IndexController {
 
+    @Autowired
+    private ArticuloService articuloService;
+
     @GetMapping("/")
+
     public String inicio(Model model) {
+        var articulos = articuloService.getArticulos(true);
+        model.addAttribute("clientes", articulos);
+
         return "index";
 
     }
