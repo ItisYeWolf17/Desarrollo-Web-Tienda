@@ -24,8 +24,10 @@ public class ArticuloController {
     private ArticuloService articuloService;
 
     @GetMapping("/listado")
+    
     public String inicio(Model model) {
-        
+        var articulos  = articuloService.getArticulos(true);
+        model.addAttribute("articulos", articulos);
         return "/articulo/listado";
     }
 

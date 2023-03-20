@@ -25,6 +25,8 @@ public class CategoriaController {
 
     @GetMapping("/listado")
     public String start(Model model) {
+        var categorias = categoriaService.getCategorias(true);
+        model.addAttribute("categorias", categorias);
         return "/categoria/listado";
     }
 

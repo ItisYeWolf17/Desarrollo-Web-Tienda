@@ -4,14 +4,10 @@
 
     <html>
         <head th:replace = "~{layout/plantilla :: head}">
-
         </head>
         <body>
             <header th:replace="~{layout/plantilla :: header}"/>
-            <section th:replace="~{categoria/fragmentos :: botonesAgregar}"/>
-            <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/> 
-            <section th:replace="~{categoria/fragmentos :: listadoCategorias}"/>  
-
+            <section th:replace="~{articulo/fragmentos :: editarArticulo}"/> 
             <footer th:replace="~{layout/plantilla :: footer}"/>
         </body>
     </html>
