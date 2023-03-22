@@ -2,6 +2,7 @@ com\tienda_k\services\ClienteService.class
 com\tienda_k\dao\CategoriaDao.class
 com\tienda_k\dao\CreditoDao.class
 com\tienda_k\services\impl\ClienteServicesImpl.class
+com\tienda_k\SecurityConfig.class
 com\tienda_k\controller\IndexController.class
 com\tienda_k\controller\CategoriaController.class
 com\tienda_k\controller\ArticuloController.class
@@ -11,6 +12,7 @@ com\tienda_k\domain\Categoria.class
 com\tienda_k\services\ArticuloService.class
 com\tienda_k\services\impl\CategoriaServicesImpl.class
 com\tienda_k\TiendaApplication.class
+com\tienda_k\WebConfig.class
 com\tienda_k\domain\Credito.class
 com\tienda_k\controller\ClienteController.class
 com\tienda_k\dao\ArticuloDao.class

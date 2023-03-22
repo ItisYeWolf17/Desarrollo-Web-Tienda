@@ -27,7 +27,7 @@ public class IndexController {
 
     public String inicio(Model model) {
         var articulos = articuloService.getArticulos(true);
-        model.addAttribute("clientes", articulos);
+        model.addAttribute("articulos", articulos);
 
         return "index";
 
