@@ -1,21 +1,21 @@
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\CategoriaDao.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\ArticuloController.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\SecurityConfig.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\CategoriaService.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\ClienteService.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Categoria.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\CreditoDao.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\impl\ArticuloServicesImpl.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\impl\CategoriaServicesImpl.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\IndexController.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\ArticuloDao.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\ArticuloService.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Articulo.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Cliente.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\impl\ClienteServicesImpl.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\CategoriaController.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Credito.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\ClienteController.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\ClienteDao.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\TiendaApplication.java
-C:\Users\sjbla\OneDrive\Documentos\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\WebConfig.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\ArticuloDao.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\impl\CategoriaServicesImpl.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\ClienteController.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\CreditoDao.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\ClienteDao.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\impl\ArticuloServicesImpl.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Articulo.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\SecurityConfig.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\dao\CategoriaDao.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\impl\ClienteServicesImpl.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\ArticuloController.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\ArticuloService.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Cliente.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\CategoriaController.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\WebConfig.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\CategoriaService.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Credito.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\controller\IndexController.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\TiendaApplication.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\services\ClienteService.java
+C:\Users\gblan\OneDrive - Universidad Fidélitas\Ufidélitas\2023\Desarrollo Web y Patrones\Desarrollo-Web-Tienda\Tienda_k\Tienda_k\src\main\java\com\tienda_k\domain\Categoria.java

@@ -16,6 +16,7 @@ com\tienda_k\WebConfig.class
 com\tienda_k\domain\Credito.class
 com\tienda_k\controller\ClienteController.class
 com\tienda_k\dao\ArticuloDao.class
+.netbeans_automatic_build
 com\tienda_k\services\CategoriaService.class
 com\tienda_k\dao\ClienteDao.class
 com\tienda_k\domain\Articulo.class
