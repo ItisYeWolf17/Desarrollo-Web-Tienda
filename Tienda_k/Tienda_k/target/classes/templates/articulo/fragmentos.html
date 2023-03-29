@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:replace="~{layout/plantilla :: head}">
         <title>TechShop</title>
     </head>
@@ -8,7 +9,7 @@
 
         <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
         <section th:fragment="botonesAgregarArticulo" class="py-4 mb-4 bg-light">
-            <div class="container">
+            <div class="container" sec:authorize="hasRole('ROLE_ADMIN')">
                 <div class="row">
                     <div class="col-md-3">   
                         <button 
@@ -71,7 +72,7 @@
                                     <input type="number" class="form-control" name="activo">
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <button class="btn btn-primary" type="submit">[[#{accion.guardar}]]</button>
                             </div>
                         </form>
@@ -111,7 +112,7 @@
                                             <td><img th:src="${articulo.imagen}" style="width: 150px"/></td>
                                             <td>[[${articulo.categoria.descripcion}]]</td>
                                             <td>[[${articulo.activo}]]</td>
-                                            <td><a th:href="@{/articulo/eliminar/}+${articulo.idArticulo}"
+                                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/articulo/eliminar/}+${articulo.idArticulo}"
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
                                                 <a th:href="@{/articulo/modificar/}+${articulo.idArticulo}"
@@ -207,13 +208,13 @@
                             <i class="fas fa-arrow-left">[[#{accion.regresar}]]</i> 
                         </a>
                     </div>
-                    <div class="col-md-4 d-grid">                                
+                    <div class="col-md-4 d-grid" sec:authorize="hasRole('ROLE_ADMIN')">                                
                         <a th:href="@{/articulo/eliminar/}+${articulo.idArticulo}"
                            class="btn btn-danger">
                             <i class="fas fa-trash"> [[#{accion.eliminar}]]</i> 
                         </a>
                     </div>
-                    <div class="col-md-4 d-grid">
+                    <div class="col-md-4 d-grid" sec:authorize="hasRole('ROLE_ADMIN')">
                         <button type="submit" class="btn btn-success">
                             <i class="fas fa-check">[[#{accion.guardar}]] </i> 
                         </button>
