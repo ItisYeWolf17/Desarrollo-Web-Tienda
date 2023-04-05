@@ -4,12 +4,15 @@
  */
 package com.tienda_k;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -20,25 +23,32 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    @Bean
-    public UserDetailsService users() {
-        UserDetails admin = User.builder()
-                .username("juan")
-                .password("{noop}123")
-                .roles("USER", "VENDEDOR", "ADMIN")
-                .build();
-        UserDetails vendedor = User.builder()
-                .username("rebeca")
-                .password("{noop}456")
-                .roles("USER", "VENDEDOR")
-                .build();
-        UserDetails usuario = User.builder()
-                .username("pedro")
-                .password("{noop}789")
-                .roles("USER")
-                .build();
+//    @Bean
+//    public UserDetailsService users() {
+//        UserDetails admin = User.builder()
+//                .username("juan")
+//                .password("{noop}123")
+//                .roles("USER", "VENDEDOR", "ADMIN")
+//                .build();
+//        UserDetails vendedor = User.builder()
+//                .username("rebeca")
+//                .password("{noop}456")
+//                .roles("USER", "VENDEDOR")
+//                .build();
+//        UserDetails usuario = User.builder()
+//                .username("pedro")
+//                .password("{noop}789")
+//                .roles("USER")
+//                .build();
+//
+//        return new InMemoryUserDetailsManager(usuario, vendedor, admin);
+//    }
+    @Autowired
+    private UserDetailsService userDetailsService;
 
-        return new InMemoryUserDetailsManager(usuario, vendedor, admin);
+    @Autowired
+    public void configurerGlobal(AuthenticationManagerBuilder build) throws Exception {
+        build.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
     @Bean
@@ -49,6 +59,7 @@ public class SecurityConfig {
                 .requestMatchers("/",
                         "/index",
                         "/errores/**",
+                        "/carrito/**",
                         "/webjars/**").permitAll()
                 .requestMatchers(
                         "/articulo/nuevo",
@@ -69,6 +80,8 @@ public class SecurityConfig {
                         "/categoria/listado",
                         "/cliente/listado"
                 ).hasAnyRole("ADMIN", "VENDEDOR")
+                .requestMatchers("/facturar/carrito")
+                .hasRole("USER")
                 )
                 .formLogin((form) -> form
                 .loginPage("/login").permitAll())
