@@ -32,9 +32,13 @@
                             <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <a class="nav-menu-link nav-link" th:href="@{/articulo/listado}">[[#{plantilla.admin}]]</a>
                             </li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')">
+                                <a class="nav-menu-link nav-link" th:href="@{/reportes/principal}">Reportes</a>
+                            </li>
+
                         </ul>   
                     </div>
-                       <div class="col-md-3 text-white text-end">
+                    <div class="col-md-3 text-white text-end">
                         <ul class="navbar-nav">
                             <a class="nav-link" th:href="@{/(lang=es)}">ES </a>
                             <a class="nav-link" th:href="@{/(lang=en)}">EN</a>
@@ -61,7 +65,7 @@
                             </li>                            
                         </ul>
                     </div>   
-                                  
+
                 </div>
             </nav>
             <section id="main-header" class="py-2 bg-success text-white">

@@ -8,6 +8,7 @@ com\tienda_k\services\impl\ClienteServicesImpl.class
 com\tienda_k\SecurityConfig.class
 com\tienda_k\controller\IndexController.class
 com\tienda_k\MvcCofig.class
+com\tienda_k\controller\ReporteController.class
 com\tienda_k\controller\CategoriaController.class
 com\tienda_k\controller\ArticuloController.class
 com\tienda_k\Encriptar.class

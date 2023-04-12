@@ -73,7 +73,8 @@ public class SecurityConfig {
                         "/cliente/nuevo",
                         "/cliente/guardar",
                         "/cliente/modificar/**",
-                        "/cliente/eliminar/**"
+                        "/cliente/eliminar/**",
+                        "/reportes/**"
                 ).hasRole("ADMIN")
                 .requestMatchers(
                         "/articulo/listado",
